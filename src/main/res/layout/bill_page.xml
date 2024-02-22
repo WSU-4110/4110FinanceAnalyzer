@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BillsPage">
+
+        <!-- Title with line underneath -->
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bill Page"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#000000"
+                />
+
+        </LinearLayout>
+
+        <!-- Add Bill Button -->
+        <Button
+            android:id="@+id/buttonAddBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleLayout"
+            android:layout_marginTop="16dp"
+            android:onClick="addBill"
+            android:text="@string/add_bill"
+            android:padding="12dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <!-- Display upcoming bill with box -->
+        <LinearLayout
+            android:id="@+id/upcomingBillLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/buttonAddBill"
+            android:layout_marginTop="16dp"
+            android:background="#EEEEEE"
+            android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textViewUpcomingBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upcoming_bill"
+            android:textStyle="bold" />
+</LinearLayout>
+
+    </RelativeLayout>

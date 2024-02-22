@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/BillPageFragment">
+
+    <!-- New fragment for Bill_Page -->
+    <fragment
+        android:id="@+id/BillPageFragment"
+        android:name="com.project.bills_page.BillPageFragment"
+        android:label="Bill Page"
+        tools:layout="@layout/bill_page" />
+</navigation>
