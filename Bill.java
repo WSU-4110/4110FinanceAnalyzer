@@ -36,7 +36,6 @@ public class Bill {
         }
 
         public Bill build() {
-            // Validate parameters if necessary
             return new Bill(billName, amount, dueDate);
         }
     }
