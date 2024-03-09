@@ -1,5 +1,4 @@
 package com.project.bills_page;
-
 import java.util.Date;
 
 public class Bill {
