@@ -34,3 +34,4 @@ CREATE TABLE `data` (
   FOREIGN KEY (`flag_id`) REFERENCES `flag_lookup` (`id`),
   FOREIGN KEY (`type_id`) REFERENCES `type_lookup` (`id`)
 );
+ 
