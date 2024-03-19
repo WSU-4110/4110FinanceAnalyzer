@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CoinNest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--Jordan's Code-->
+    <string name='hello_blank_fragment'>Hello blank fragment</string>
+    <string name='library'>Library</string>
+    <string name='shorts'>Shorts</string>
+    <string name='subscription'>Subscription</string>
+    <string name='home'>Home</string>
+    <string name="reports">Reports</string>
+    <string name="misc">Misc</string>
+
+</resources>
