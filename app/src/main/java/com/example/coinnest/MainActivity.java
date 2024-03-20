@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Initially hide the navigation bar until the user logs in
         binding.bottomAppBar.setVisibility(View.GONE);
+        binding.floatingActionButton.setVisibility(View.GONE); // The ID here must match the XML
+
 
         if (!isLoggedIn) {
             // Show the LoginFragment
@@ -54,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         isLoggedIn = true;
         replaceFragment(new HomeFragment());
         binding.bottomAppBar.setVisibility(View.VISIBLE);
+        binding.floatingActionButton.setVisibility(View.VISIBLE); // Make the FAB visible after login
     }
+
 
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
