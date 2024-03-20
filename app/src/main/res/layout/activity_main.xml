@@ -15,34 +15,37 @@
         android:id="@+id/frame_layout"/>
 
     <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottomAppBar"
         android:layout_gravity="bottom"
         android:background="@color/white"
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="50dp" >
-        
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bottomNavigationView"
             android:layout_marginEnd="20dp"
-            app:labelVisibilityMode="labeled"
             android:background="@android:color/transparent"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:menu="@menu/bottom_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/white"
-        app:labelVisibilityMode="labeled"
         android:src="@drawable/baseline_add_24"
         app:layout_anchor="@id/bottomAppBar"
+        app:layout_anchorGravity="center"
+        app:labelVisibilityMode="labeled"
         app:maxImageSize="40dp"
         app:tint="@color/lavender"/>
-
 
     <!--Khaled's Code-->
     <com.google.android.material.card.MaterialCardView
@@ -52,12 +55,10 @@
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        app:cardElevation="0dp"
         app:cardCornerRadius="0dp"
-        app:strokeColor="@color/colorAccent"
-        app:strokeWidth="0dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -78,19 +79,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardElevation="4dp"
         app:cardCornerRadius="8dp"
-        app:strokeColor="@color/colorPrimaryDark"
-        app:strokeWidth="1dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/overviewCard">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Balance Summary"
-            android:padding="16dp" />
+            android:padding="16dp"
+            android:text="Balance Summary" />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
@@ -98,19 +97,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardElevation="4dp"
         app:cardCornerRadius="8dp"
-        app:strokeColor="@color/colorPrimaryDark"
-        app:strokeWidth="1dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/balanceCard">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calendar"
-            android:padding="16dp" />
+            android:padding="16dp"
+            android:text="Calendar" />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
@@ -118,44 +115,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardElevation="4dp"
         app:cardCornerRadius="8dp"
-        app:strokeColor="@color/colorPrimaryDark"
-        app:strokeWidth="1dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calendarCard">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Upcoming Bills"
-            android:padding="16dp" />
+            android:padding="16dp"
+            android:text="Upcoming Bills" />
     </com.google.android.material.card.MaterialCardView>
 
-
-    <!--Fen's Code-->
-    <Button
-        android:id="@+id/btn_pickdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview_showdate" />
-
-    <TextView
-        android:id="@+id/txtview_showdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="320dp"
-        android:text="2/14/2024"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_pickdate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Fen's Code -->
 
     <!--<TextView
         android:layout_width="wrap_content"

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         // Initially hide the navigation bar until the user logs in
-        binding.bottomNavigationView.setVisibility(View.GONE);
+        binding.bottomAppBar.setVisibility(View.GONE);
 
         if (!isLoggedIn) {
             // Show the LoginFragment
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // User is already logged in, so show the HomeFragment and the navigation bar
             replaceFragment(new HomeFragment());
-            binding.bottomNavigationView.setVisibility(View.VISIBLE);
+            binding.bottomAppBar.setVisibility(View.VISIBLE);
         }
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         // This method will be called when login is successful
         isLoggedIn = true;
         replaceFragment(new HomeFragment());
-        binding.bottomNavigationView.setVisibility(View.VISIBLE);
+        binding.bottomAppBar.setVisibility(View.VISIBLE);
     }
 
     private void replaceFragment(Fragment fragment) {
