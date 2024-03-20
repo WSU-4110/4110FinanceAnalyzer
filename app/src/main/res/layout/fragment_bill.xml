@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BillPageFragment">
+
+        <!-- Title TextView for "Bill Page", aligned to the left and lowered a bit -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bill Page"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:gravity="start" />
+
+        <!-- Underline View for "Bill Page" title -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/> <!-- Adjusted margin -->
+
+        <!-- Button to "Add Bill", placed below the title and lowered a bit -->
+        <Button
+            android:id="@+id/buttonAddBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Bill"
+            android:layout_below="@id/textViewTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"/>
+
+        <!-- TextView for "Upcoming Bills", below the Add Bill button and aligned to the left -->
+        <TextView
+            android:id="@+id/textViewUpcomingBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Bills: "
+            android:layout_below="@id/buttonAddBill"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:textSize="18sp"
+            android:gravity="start" />
+
+        <!-- Underline View for "Upcoming Bills" -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_below="@id/textViewUpcomingBill"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/> <!-- Adjusted margin -->
+
+</RelativeLayout>

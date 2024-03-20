@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             if (itemId == R.id.home) {
                 replaceFragment(new HomeFragment());
             } else if (itemId == R.id.reports) {
-                replaceFragment(new ReportFragment());
+                replaceFragment(new BillPageFragment());
             } else if (itemId == R.id.calendar) {
                 replaceFragment(new CalendarFragment());
             } else if (itemId == R.id.misc) {
