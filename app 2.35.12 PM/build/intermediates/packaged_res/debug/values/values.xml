@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="labels_array">
+        <item>Grocery</item>
+        <item>Gas</item>
+        <item>Utilities</item>
+        <item>Taxes</item>
+        <item>Education</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="amount_label_text">Amount</string>
+    <string name="app_name">FinanceAnalyzer</string>
+    <string name="category_label_text">Category</string>
+    <string name="category_selected_text">Category selected</string>
+    <string name="date">Date</string>
+    <string name="date_button">Date</string>
+    <string name="date_label_text">Date</string>
+    <string name="datepicker">datePicker</string>
+    <string name="enter_amount_hint">Enter amount</string>
+    <string name="enter_date_hint">Select Date</string>
+    <string name="enter_name_hint">Enter Merchant Name</string>
+    <string name="enter_note_hint">Enter notes here</string>
+    <string name="must_have">Must Have</string>
+    <string name="must_have_text">must have expenditure selected</string>
+    <string name="name_label_text">Name</string>
+    <string name="nice_to_have">Nice to have</string>
+    <string name="nice_to_have_text">nice to have expenditure selected</string>
+    <string name="not_necessary">Not necessary</string>
+    <string name="not_necessary_to_have_text">not necessary to have expenditure selected</string>
+    <string name="not_sure">Not sure</string>
+    <string name="not_sure_have_text">not sure to have expenditure selected</string>
+    <string name="note_label_text">Notes</string>
+    <string name="receipt_label_text">Edit Receipt</string>
+    <string name="select_need_based">Choose how much you need this expenditure</string>
+    <string name="title_edit_receipt">Edit Receipt</string>
+    <style name="Base.Theme.FinanceAnalyzer" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+        
+    </style>
+    <style name="Theme.FinanceAnalyzer" parent="Base.Theme.FinanceAnalyzer"/>
+    <style name="Theme.FinanceAnalyzer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.FinanceAnalyzer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>
