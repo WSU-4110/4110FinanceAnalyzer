@@ -1,7 +1,6 @@
 package com.example.coinnest;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +17,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BillPageFragment extends Fragment {
-    private List<Bill> billList = new ArrayList<>();
+    private List<String> billsList = new ArrayList<String>();
     private ListView upcomingBillsListView;
     private Button buttonAddBill;
 
@@ -35,14 +35,9 @@ public class BillPageFragment extends Fragment {
 
 
         ListView billsListView = view.findViewById(R.id.upcomingBillsListView);
-        String[] bills = new String[]{
-                "Credit Card: $30.00 Due Date: 04-12-2024",
-                "Credit Card 2: $50.00 Due Date: 04-15-2024",
-                "Mortgage: $1,500.00 Due Date: 04-20-2024",
-                "Car Loan: $550.00 Due Date: 04-25-2024",
-                "Student Loans: $1,000 Due Date: 04-30-2024"
-        };
-        ArrayAdapter<String> billsAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, bills);
+        
+
+        ArrayAdapter<String> billsAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, billsList);
         billsListView.setAdapter(billsAdapter);
 
 
@@ -85,7 +80,11 @@ public class BillPageFragment extends Fragment {
             String dueDate = billDueDateInput.getText().toString();
 
             // Code here for handling saving this information to database
+            String newBill = billName + ": $" + billAmount + " Due Date: " + dueDate;
+            billsList.add(newBill);
 
+            // Update the ListView
+            updateListView();
         });
 
         builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
@@ -93,4 +92,10 @@ public class BillPageFragment extends Fragment {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+    private void updateListView() {
+        ListView billsListView = getView().findViewById(R.id.upcomingBillsListView); // Make sure this ID matches your layout
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, billsList);
+        billsListView.setAdapter(adapter);
+    }
+
 }
