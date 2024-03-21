@@ -16,18 +16,37 @@
         android:theme="@style/Theme.CoinNest"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-    <activity
-        android:name=".LoginFragment"
-        android:exported="false" />
-    <activity
-        android:name=".MainActivity"
-        android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-</application>
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    </manifest>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- SettingActivity -->
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+
+        <!-- ContactUsActivity -->
+        <activity
+            android:name=".ContactUsActivity"
+            android:exported="false" />
+
+        <!-- RateUsActivity -->
+        <activity
+            android:name=".RateUsActivity"
+            android:exported="false" />
+
+        <!-- AccountActivity -->
+        <activity
+            android:name=".AccountActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
