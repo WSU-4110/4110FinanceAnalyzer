@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BillPageFragment">
+
+        <!-- Title TextView for "Bill Page", aligned to the left and lowered a bit -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bill Page"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:gravity="start" />
+
+        <!-- Underline View for "Bill Page" title -->
+        <View
+            android:id="@+id/titleUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Button to "Add Bill", placed below the title -->
+        <Button
+            android:id="@+id/buttonAddBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Bill"
+            android:layout_below="@id/titleUnderline"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"/>
+
+        <!-- Upcoming Bills CardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/textViewUpcomingBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="@color/colorPrimaryDark"
+            app:strokeWidth="1dp"
+            android:layout_below="@id/buttonAddBill">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Upcoming Bills: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/upcomingBillsRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
